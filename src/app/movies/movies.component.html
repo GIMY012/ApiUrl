@@ -1,0 +1,42 @@
+<div class="text-center">
+<h1 class="m-5 p-5  border-bottom border-success d-inline-block
+">Display Data From API URL</h1>
+</div>
+<div class="container">
+    <div class="row g-4">
+        @for (movie of movies; track movie.id) {
+        <div class="col-md-4">
+            <!-- <div class="inner border p-2">
+                <h2>{{movie.category}}</h2>
+                <img [src]="movie.image" class="img-fluid rounded-top" [alt]="movie.title" />
+                <div class="text-bg-light">
+                    <h3>{{movie.title.split(' ',4).join(' ')}}</h3>
+                    <p>{{movie.description.split(' ',20).join(' ')}}</p>
+                    <p class="text-success">price : {{movie.price}}</p>
+                    <span class="text-danger">Rate : {{movie.rating.rate}}<i
+                            class="fas fa-star text-warning"></i></span>
+                     <hr> 
+                    <span class="text-danger">count : {{movie.rating.count}}<i
+                            class="fas fa-star text-warning"></i></span>
+                </div>
+            </div> -->
+            <div class="card border-danger mb-3" style="max-width: 18rem;">
+                <div class="card-header">
+                    {{movie.category}}
+                </div>
+                <img class="card-img-top" [src]="movie.image" alt="Card image cap">
+                <div class="card-body text-danger">
+                    <h5 class="card-title">{{movie.title.split(' ',4).join(' ')}}</h5>
+                    <p class="card-text">{{movie.description.split(' ',20).join(' ')}}</p>
+                    <p class=" card-text text-success">price : {{movie.price}}</p>
+                    <span class=" card-text text-danger">Rate : {{movie.rating.rate}}<i
+                            class="fas fa-star text-warning"></i></span>
+                    <!-- <hr> -->
+                    <span class="card-text text-danger">count : {{movie.rating.count}}<i
+                            class="fas fa-star text-warning"></i></span>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>
